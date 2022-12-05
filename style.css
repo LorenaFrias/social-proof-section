@@ -1,0 +1,167 @@
+/* VARIABLES */
+
+:root {
+
+    --DarkMagenta: hsl(300, 43%, 22%);
+    --SoftPink: hsl(333, 80%, 67%);
+
+
+    --DarkGrayishMagenta: hsl(303, 10%, 53%);
+    --LightGrayishMagenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+/* CSS RESET */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+    
+body {
+    line-height: 1.5;
+}
+
+
+/* GENERAL STYLES */
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    color: var(--DarkGrayishMagenta);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin-inline: auto;
+    margin-block: 5.5em;
+    padding-inline: 1.7em;
+}
+
+
+
+.text {
+    text-align: center;
+    display: grid;
+    gap: 1em;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--DarkMagenta);
+    line-height: .8;
+}
+
+p {
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.flex-container {
+    margin-block: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    /* margin-inline: 1.5em; */
+
+}
+.rating {
+    background-color: var(--LightGrayishMagenta);
+    border-radius: 10px;
+    padding-inline: 1em;
+    padding-block: .8em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.rating__stars {
+    display: flex;
+    gap: .5em;
+    justify-content: center;
+}
+.rating__text{
+    font-size: 16px;
+    letter-spacing: .5px;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--DarkMagenta);
+    font-weight: 700;
+}
+
+.testimonials {
+    margin-top: 3em;
+}
+
+.testimonial {
+    background-color: var(--DarkMagenta);
+    padding-inline: 2.25em;
+    padding-block: 2.5em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.7em;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    
+}
+
+.testimonial__img {
+    width: 15%;
+}
+
+.testimonial__img img {
+    border-radius: 50%;
+}
+
+.testimonial__name p {
+    
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+.testimonial__name p:nth-child(1) {
+    color: var(--White);
+    font-weight: 700;
+}
+
+.testimonial__name p:nth-child(2){
+    color: var(--SoftPink);
+    
+}
+
+.testimonial__text p {
+    color: var(--White);
+    text-align: left;
+    line-height: 1.3;
+    font-weight: 500;
+    quotes: "" "" "";
+}
+
+.testimonial__text p::before{
+    content:  open-quote;
+    margin-right: 5px;
+}
+
+.testimonial__text p::after{
+    content:  close-quote;
+}
